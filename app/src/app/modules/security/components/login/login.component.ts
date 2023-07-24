@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../../shared/service/auth.service";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,11 @@ export class LoginComponent {
   email = ''
   password = ''
 
-  constructor(private router:Router,private authService:AuthService) {
+  constructor(private router:Router,private authService:AuthService , private  title:Title) {
   }
 
   ngOnInit(){
+    this.title.setTitle('Security | Tittle')
     if(this.authService.IsExistsToken('my-token')){
       this.router.navigateByUrl('/console').then()
     }
