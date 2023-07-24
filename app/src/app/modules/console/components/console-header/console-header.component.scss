@@ -1,0 +1,26 @@
+.header-outer{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #34495e;
+  position: fixed;
+  padding: 0 10px;
+}
+
+button{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ border: none;
+}
+
+button:hover{
+  background-color: #34495e;
+  color: white;
+  cursor: pointer;
+  border: none;
+
+}
